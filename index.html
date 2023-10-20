@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/icons/starbucks.ico">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <section id = "section_id">
+        <div class="round"></div>
+        <header>
+            <a href="#" class="logo"><img src="/main_page_image/logo.png"></a>
+            <ul>
+                <li>
+                    <a href="/pages/history.html">History Of Coffee</a>
+                </li>
+                <li>
+                    <a href="/pages/about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="/pages/sign.html">Sign In</a>
+                </li>
+
+            </ul>
+        </header>
+        <div class="main_content">
+            <div class="text">
+                <h2>
+                    It's not just Coffee <br> It's <span>Starbucks</span>
+                </h2>
+            <p> Hot and cold drinks, whole-bean coffee, micro-ground instant coffee, espresso, caffe latte, full and loose-leaf teas, juices, Frappuccino beverages, pastries, and snacks.We offer you some seasonal or specific offers depending on the country and also free Wi-Fi Internet access.</p>
+            <a href="/pages/order.html">Order Now</a>
+            </div>
+            <div class="img_box">
+                <img src="main_page_image/project_1(img).png" class="starbucks">
+            </div>
+            
+        </div>
+        <ul>
+            <div class="change_coffee">
+                 <li><img src="main_page_image/thumb1.png" onclick="imgChange('main_page_image/project_1(img).png');circleChange('#017143')"></li>
+                <li><img src="main_page_image/thumb2.png"onclick="imgChange('main_page_image/img2.png');circleChange('#eb7495')"></li>
+                <li><img src="main_page_image/thumb3.png"onclick="imgChange('main_page_image/img-3.png');circleChange('#d752b1')"></li>
+            </div>
+        </ul>
+        <div class="icons">
+            <ul>
+                <li><a href="#"><img src="main_page_image/facebook.png"></a></li>
+                <li><a href="#"><img src="main_page_image/instagram.png"></a></li>
+                <li><a href="#"><img src="main_page_image/twitter.png"></a></li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        function imgChange(img_name){
+            document.querySelector('.starbucks').src = img_name;
+        }
+        // function circleChange(color_name){
+        //    const r =  document.querySelector('.round');
+        //    r.style.background = color_name;
+        // }
+        
+    </script>
+</body>
+</html> 

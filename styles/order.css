@@ -1,0 +1,417 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+:root {
+  --bg-color: #fff;
+  --link-color: #000;
+  --link-size: 1.1rem;
+  --right-side-bg-color:7, 69, 56;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins',sans-serif;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+
+.app-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: -1;
+}
+.app-bg .left-side {
+  background-color: rgb(221, 247, 231);
+  width: 75%;
+  height: 100%;
+ 
+}
+.app-bg .right-side {
+  background-color: rgb(var(--right-side-bg-color));
+  width: 25%;
+  height: 100%;
+
+}
+
+header {
+  width: 100%;
+  height: 100px;
+
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  
+
+  z-index: 99;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+  margin: 0 10px;
+  padding: 5px 5px;
+  border-radius: 15px;
+}
+
+header nav ul li a {
+  font-size: var(--link-size);
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+ .nav-img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+
+}
+
+
+.shopping-bag {
+  padding: 10px 5px;
+}
+
+
+.shopping-bag a {
+  display: flex;
+  align-items: center;
+}
+
+
+.shopping-bag a img {
+  width: 32px;
+  height: 32px;
+}
+
+
+.shopping-bag .total-items-in-cart {
+  margin-left: 10px;
+  padding-bottom: 10px;
+  background-color:rgb(141, 200, 171);
+  border-radius: 5px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+}
+
+.products-list {
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 100px;
+
+  display: flex;
+}
+
+.products {
+  height: 100%;
+  width: 75%;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 3fr);
+}
+.products img {
+  width: 250px;
+  filter: drop-shadow(30px 10px 10px #ddd);
+}
+.products .item {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.products .item .item-container {
+  width: 250px;
+  height: 95%;
+  background-color: rgb(7, 69, 56);
+
+  border-radius: 25px;
+
+  position: relative;
+  object-fit:cover;
+}
+.products .item .item-container .item-img {
+  width: 250px;
+  height: 250px;
+  overflow:hidden;
+  background-color: white;
+
+  border: 1px solid #000;
+  border-radius: 25px 25px 0 0;
+
+  display: flex;
+ 
+  align-items: center;
+}
+.products .item .item-container .desc {
+  width: 100%;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  letter-spacing: 0.5px;
+  text-align: left;
+
+
+}
+.products .item .item-container .desc p{
+  font-size: 10px;
+}
+
+.products .item .item-container .desc h2{
+  font-size: 20px;
+}
+
+.products .item .item-container .add-to-cart {
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  padding: 5px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+.products .item .item-container .add-to-wishlist {
+  background-color: rgba(255, 21, 21, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 10px;
+  right: 60px;
+
+  padding: 5px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+
+.products .item .item-container .add-to-cart img {
+  width: 45px;
+  height: 45px;
+}
+
+.products .item .item-container .add-to-wishlist img {
+  width: 32px;
+  height: 32px;
+
+  padding: 5px;
+}
+
+.cart {
+  height: 100vh;
+  width: 25%;
+  position: relative;
+
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.cart-items {
+  max-height: calc(100vh - 247px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.cart-item div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item .item-info {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+
+  border-radius: 0 10px 10px 0;
+
+  padding: 10px;
+  color: #fff;
+  width: 50px;
+}
+
+.cart-item .item-info h4 {
+  padding: 4px;
+  text-align: center;
+  font-size: 13px;
+
+}
+
+.cart-item .item-info:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  
+  cursor: pointer;
+}
+
+.cart-item .item-info img {
+  width: 80px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.cart-item .unit-price {
+  flex: 1;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.cart-item .units {
+  flex: 1;
+}
+
+.cart-item .units .number {
+  margin: 0 10px;
+
+  font-size: 1.2rem;
+  color: white;
+}
+
+.cart-item .units .btn {
+  width: 20px;
+  height: 20px;
+
+  background-color: rgb(141, 200, 171);
+
+  border-radius: 50%;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+
+}
+
+
+.cart-footer {
+  width: 25%;
+  margin-top: 100px;
+  background-color: rgb(246, 245, 247);
+  position: fixed;
+  bottom: 0;
+  left: 1;
+  border-left: 1px solid rgb(var(--right-side-bg-color));
+  
+}
+
+
+.cart-footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 0;
+
+  font-size: 1.3rem;
+}
+
+.cart-footer .subtotal {
+  background-color: white;
+  font-size: 15px;
+}
+
+.cart-footer .checkout {
+  background-color: rgb(7, 69, 56);
+  color: white;
+
+  cursor: pointer;
+}
+
+header{
+  position: fixed;
+  background-color: white;
+  
+}
+
+@media only screen and (max-width: 508px) {
+
+  .products{
+    display: initial;
+  }
+  .products .item{
+    height: 75%;
+  }
+
+  .cart{
+    display: none;
+  }
+
+  .app-bg{
+    background-color: rgb(221, 247, 231);
+  }
+
+  .app-bg .right-side{
+  
+    display: none;
+
+  }
+
+
+}
+
+
+
+
+
+
+

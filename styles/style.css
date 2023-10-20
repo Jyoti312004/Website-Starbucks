@@ -1,0 +1,289 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    overflow: hidden;
+  
+
+}
+
+#section_id{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+   
+
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .logo{
+    position: relative;
+    max-width: 100px;
+
+}
+
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    
+}
+
+header ul li a{
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+
+}
+
+.main_content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+        overflow: hidden;
+    
+}
+
+.main_content .text{
+    position: relative;
+    max-width: 600px;
+
+}
+
+.main_content .text h2{
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500px;
+}
+
+.main_content .text h2 span{
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+
+}
+
+.main_content .text p {
+    color: #333;
+
+}
+
+.main_content .text  a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background-color: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+}
+
+.main_content .img_box{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+
+}
+
+.main_content .img_box img{
+    max-width: 340px;
+    height: 395px;
+}
+
+
+
+.change_coffee{
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    transform: translate(-50%);
+    display: flex;
+}
+.change_coffee li{
+    list-style: none;
+    display: inline-block;
+    margin:0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.change_coffee li :hover{
+    transform: translateY(-10px);
+}
+
+.change_coffee li img{
+    
+    max-width: 60px;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+
+}
+
+.icons li{
+    list-style: none;
+
+}
+
+.icons li a {
+    display: inline-block;
+    margin: 5px 0 ;
+    transform:scale(0.6);
+    filter: invert(1);
+}
+
+.round{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #017143;
+    clip-path: circle(600px at right 800px);
+  
+
+}
+
+@media only screen and (max-width: 1063px) and (min-width: 911px){
+    .main_content .img_box img{
+        padding: 20px;
+        height: 220px;
+        width: 300px;
+
+      }
+
+    .round{
+        clip-path: circle(500px at right 800px);
+    }
+
+
+
+}
+
+@media only screen and (max-width: 897px) and (min-width: 525px)  {
+
+    *{
+        overflow: visible;
+    }
+
+    .main_content .img_box img {
+        height: 250px;
+        padding: 10px;
+        margin-left: 30px;
+    }
+
+    .main_content .text h2 {
+        letter-spacing: 0.8px;
+          font-size: 3em;
+      }
+
+    .round{
+        clip-path: circle(0px at right 800px);
+    }
+
+    header img{
+        height: 65px;
+    }
+
+    .change_coffee{
+        bottom: -20px;
+    }
+} 
+
+@media screen and (max-width:524px) {
+    *{
+        overflow: visible;
+    }
+    header{
+        padding: 15px;
+    }
+    header img{
+        height: 50px;
+    }
+    #section_id{
+        padding: 100px 70px;
+    }
+    .main_content{
+        display: initial;
+    }
+    .main_content .text p{
+        color: white;
+    }
+
+    .main_content .text h2 {
+      letter-spacing: 0.8px;
+        font-size: 4em;
+    }
+    .main_content .text h2 span{
+        color: white;
+        font-size: 0.8em;
+    }
+    .main_content .img_box{
+        display: initial;
+    }
+    .change_coffee{
+        bottom: 0;
+    }
+    .icons ul li{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main_content .text a {
+        background-color: white;
+        color: #017143;
+        margin-bottom: 20px;
+    }
+
+    .main_content .img_box img{
+      padding: 20px;
+    }
+
+    .round{
+        clip-path: circle(600px at right 800px);
+    }
+
+}  
+

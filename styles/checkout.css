@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(7, 69, 56);
+    margin: 0;
+    padding: 0;
+}
+
+.checkout-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#card-details {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #017143;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.order-status {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(7, 69, 56);
+    margin-top: 20px;
+
+}
+
+.hidden {
+    display: none;
+}
+
+
+#card-details {
+    margin-top: 20px;
+}
+
+#card-details label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+#card-details input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: calc(100% - 22px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+#card-details input[type="text"]:last-child {
+    width: calc(50% - 22px);
+    margin-right: 20px;
+}
+
+#card-details input[type="text"]:first-child {
+    width: calc(50% - 22px);
+}
+
+

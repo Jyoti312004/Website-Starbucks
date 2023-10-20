@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="/icons/starbucks.ico">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/about.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+
+
+                <li >
+                    <img src="/main_page_image/logo.png" class="nav-img">
+                </li>
+                <li class="">
+                    <a href="/">
+                   Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/pages/history.html">
+                        History of Coffee
+                        
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/pages/about.html">
+                        About us
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="about-container">
+        <h1>Welcome to Our Coffee World</h1>
+        <p>At Our Coffee World, we are passionate about delivering the finest coffee experience to our customers. Our journey began with a simple vision: to create a warm, inviting space where coffee enthusiasts can gather, connect, and savor the rich flavors of premium coffee beans.</p>
+        
+        <h2>Our Mission</h2>
+        <p>Our mission is to source the highest quality coffee beans from around the world, roast them to perfection, and craft exquisite coffee beverages that delight the senses. We are dedicated to fostering a sense of community and creating memorable moments for everyone who walks through our doors.</p>
+        
+        <h2>Meet Our Team</h2>
+        <p>Our team of skilled baristas and coffee experts is committed to providing exceptional service and sharing their passion for coffee with our customers. We believe in the artistry of coffee-making and strive for excellence in every cup.</p>
+        
+        <h2>Visit Us Today</h2>
+        <p>Come visit our coffee shop and experience the aroma, taste, and warmth that define Our Coffee World. We look forward to welcoming you and sharing the joy of coffee with you.</p>
+        
+        <button id="visitButton">Plan Your Visit</button>
+
+        <h2>Share Your Feedback</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" rows="4" required></textarea>
+            </div>
+    
+            <button type="submit">Submit Feedback</button>
+        </form>
+        
+        
+    </div>
+
+    <script >
+
+        document.getElementById("visitButton").addEventListener("click", function() {
+            alert("Plan your visit to Our Coffee World and immerse yourself in the world of exquisite coffee and warm hospitality!");
+        });
+
+        const feedbackForm = document.getElementById("feedbackForm");
+                
+        function submitForm(event) {
+            event.preventDefault(); 
+
+            const name = document.getElementById("name").value;
+            // console.log(value);
+            const email = document.getElementById("email").value;
+
+            const feedback = document.getElementById("feedback").value;
+
+            console.log("Email: " + email);
+            console.log("Feedback: " + feedback);
+            console.log("Name: " + name);
+
+                     
+            document.getElementById("feedbackForm").innerHTML = "<h2>Thank You!</h2><p>We appreciate your feedback, " + name + "!</p>";
+           
+
+        }
+
+        
+        document.getElementById("feedbackForm").addEventListener("submit", submitForm);
+
+    </script>
+</body>
+</html>
