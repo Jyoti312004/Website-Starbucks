@@ -32,18 +32,6 @@ body{
   border-radius: 7px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
-.container .registration{
-  display: none;
-}
-#check:checked ~ .registration{
-  display: block;
-}
-#check:checked ~ .login{
-  display: none;
-}
-#check{
-  display: none;
-}
 .container .form{
   padding: 2rem;
 }
@@ -98,6 +86,19 @@ body{
 .signup label:hover{
   text-decoration: underline;
 }
+
+.container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
 </style>
 <body>
   <div class="container">
@@ -105,10 +106,10 @@ body{
     <div class="login form">
       <header>Login</header>
       <form action="#">
-        <input type="text" placeholder="Enter your email">
-        <input type="password" placeholder="Enter your password">
+        <input type="text" placeholder="Enter your email" required>
+        <input type="password" placeholder="Enter your password" required>
         <a href="#">Forgot password?</a>
-        <input type="button" class="button" value="Login">
+        <input type="button" class="button" value="Login" onclick="window.location.href = '/index.html'">
       </form>
       <div class="signup">
         <span class="signup">Don't have an account?

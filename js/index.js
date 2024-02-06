@@ -208,5 +208,3 @@ checkCart.addEventListener("click", () => {
         alert("Please add some items to the cart");
     }
 });
-
-

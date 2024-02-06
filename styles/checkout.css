@@ -92,16 +92,16 @@ button:hover {
 #card-details input[type="text"] {
     padding: 10px;
     margin-bottom: 15px;
-    width: calc(100% - 22px);
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
     display: inline-block;
+    width: calc(100% - 22px);
 }
 
 #card-details input[type="text"]:last-child {
-    width: calc(50% - 22px);
     margin-right: 20px;
+    width: calc(50% - 22px);
 }
 
 #card-details input[type="text"]:first-child {

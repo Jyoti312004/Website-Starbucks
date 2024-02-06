@@ -19,7 +19,6 @@ const server = http.createServer((req, res) => {
     });
   }
 
-  
   else if (req.url === "/pages/order.html") {
     const orderPath = path.join(__dirname, "/pages/order.html");
     fs.readFile(orderPath, (error, data) => {

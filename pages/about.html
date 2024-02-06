@@ -74,7 +74,7 @@
                 <textarea id="feedback" rows="4" required></textarea>
             </div>
     
-            <button type="submit">Submit Feedback</button>
+            <button type="submit" id = "onsubmit" onclick="submitForm()">Submit Feedback</button>
         </form>
         
         
@@ -82,33 +82,58 @@
 
     <script >
 
-        document.getElementById("visitButton").addEventListener("click", function() {
-            alert("Plan your visit to Our Coffee World and immerse yourself in the world of exquisite coffee and warm hospitality!");
-        });
+        // document.getElementById("visitButton").addEventListener("click", function() {
+        //     alert("Plan your visit to Our Coffee World and immerse yourself in the world of exquisite coffee and warm hospitality!");
+        // });
+        
 
-        const feedbackForm = document.getElementById("feedbackForm");
+        //const feedbackForm = document.getElementById("feedbackForm");
+        
+        // const subData = document.querySelector("#onsubmit");
                 
-        function submitForm(event) {
-            event.preventDefault(); 
+        //     subData.addEventListener("click",()=>{
+        //                 const name = document.getElementById("name").value;
+                
+                    
+        //         console.log(name.value);
+        //         const email = document.getElementById("email").value;
 
-            const name = document.getElementById("name").value;
-            // console.log(value);
-            const email = document.getElementById("email").value;
+        //         const feedback = document.getElementById("feedback").value;
+        //         document.getElementById("feedbackForm").innerHTML = "<h2>Thank You!</h2><p>We appreciate your feedback, " + name + "!</p>";
+        
+        //     });
+        
+        // const name = document.getElementById("name").value;
+        function submitForm() {
+                              const name = document.getElementById("name").value;
+                      
+                          
+                      console.log(name.value);
+                      const email = document.getElementById("email").value;
+      
+                      const feedback = document.getElementById("feedback").value;
+                      document.getElementById("feedbackForm").innerHTML = "<h2>Thank You!</h2><p>We appreciate your feedback, " + name + "!</p>";
 
-            const feedback = document.getElementById("feedback").value;
+            
+          }
+            
+            // console.log(name.value);
+            // const email = document.getElementById("email").value;
 
-            console.log("Email: " + email);
-            console.log("Feedback: " + feedback);
-            console.log("Name: " + name);
+            // const feedback = document.getElementById("feedback").value;
+
+            // console.log("Email: " + email);
+            // console.log("Feedback: " + feedback);
+            // console.log("Name: " + name);
 
                      
-            document.getElementById("feedbackForm").innerHTML = "<h2>Thank You!</h2><p>We appreciate your feedback, " + name + "!</p>";
+    
            
 
-        }
+        
 
         
-        document.getElementById("feedbackForm").addEventListener("submit", submitForm);
+        //document.getElementById("feedbackForm").addEventListener("submit", submitForm);
 
     </script>
 </body>
